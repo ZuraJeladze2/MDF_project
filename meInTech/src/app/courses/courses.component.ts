@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent {
-
+  courses = [
+    { id: '0', name: 'Media literacy', description: 'Lorem ipsum...', image: '../../assets/course images/media literacy.jpg' },
+    { id: '0', name: 'Media literacy', description: 'Lorem ipsum...', image: '../../assets/course images/media literacy.jpg' },
+  ];
 }
