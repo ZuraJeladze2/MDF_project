@@ -1,1 +1,19 @@
-<p>courses works!</p>
+<section>
+    <div class="course-list-wrapper bs-pink rounded w-75 mx-auto mt-5 p-5">
+        <h1 class="h1  text-center">BROWSE OUR COURSES</h1>
+        <hr>
+        <div class="course-list w-75 mx-auto">
+            <a *ngFor="let course of courses" [routerLink]="['/courses', course.id]">
+                <div class="btn btn-secondary text-start course d-flex p-3 my-5">
+                    <div class="w-25 h-100">
+                        <img [src]="course.image" alt="{{ course.name }}" class="h-100 object-fit-cover rounded">
+                    </div>
+                    <div class="mx-4 text">
+                        <h3 class="h2">{{ course.name }}</h3>
+                        <p class="description">{{ course.description }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

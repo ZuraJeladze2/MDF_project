@@ -41,11 +41,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+a{
+    text-decoration: none;
+}
 :root{
-	--font-color: rgb(0, 0, 0);
-    --font-color-sub: #0f0f0f;
-    --bg-color-alt: rgb(198, 236, 213);
     --main-color: rgb(0, 0, 0);
+    --bg-color-alt: rgb(198, 236, 213);
+    --font-color-sub: #0f0f0f;
 }
 /*.bg-primary{
 	background-color: var(--bg-color) !important;
