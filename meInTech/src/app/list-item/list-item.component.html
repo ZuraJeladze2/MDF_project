@@ -1,0 +1,11 @@
+<a *ngFor="let item of items" [routerLink]="[parentRoute, item.id]">
+    <div class="btn btn-secondary text-start item d-flex p-3 my-5">
+        <div class="list-item-img-wrapper h-100 border border-danger">
+                <img [src]="item.image" alt="{{ item.name }}" class="h-100 w-100 object-fit-cover rounded border border-success">
+        </div>
+        <div class="mx-4 my-1">
+            <h3 class="h3">{{ item.name }}</h3>
+            <p class="description">{{ item.description }}</p>
+        </div>
+    </div>
+</a>
