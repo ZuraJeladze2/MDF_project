@@ -12,15 +12,11 @@ export class ListItemComponent {
   @Input() isLesson: boolean | undefined;
 
   getRouterLink(item: any): any {
-    console.log('ih');
-    
-    console.log(item);
     
     if (this.isCourse) {
       return ['/courses', item.id];
     } else if (this.isLesson) {
       return ['/courses', item.id, 'lesson', item.lesson_id];
     }
-    console.log(this.isCourse);
   }
 }

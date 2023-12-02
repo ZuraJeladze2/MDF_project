@@ -10,6 +10,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CourseComponent } from './course/course.component';
 import { ListItemComponent } from './list-item/list-item.component';
 import { LessonComponent } from './lesson/lesson.component';
+import { WizardComponent } from './wizard/wizard.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LessonComponent } from './lesson/lesson.component';
     CoursesComponent,
     CourseComponent,
     ListItemComponent,
-    LessonComponent
+    LessonComponent,
+    WizardComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,15 @@
+<p>wizard works!</p>
+<div>
+    <!-- Display current step content -->
+    <ng-container *ngIf="currentStep < totalSteps">
+      <ng-container
+        *ngComponentOutlet="wizardSteps[currentStep].component; injector: wizardSteps[currentStep].injector"
+      ></ng-container>
+    </ng-container>
+
+    <!-- Display wizard navigation -->
+    <div>
+      <button (click)="previousStep()" [disabled]="currentStep === 0">Previous</button>
+      <button (click)="nextStep()" [disabled]="currentStep === totalSteps - 1">Next</button>
+    </div>
+  </div>
