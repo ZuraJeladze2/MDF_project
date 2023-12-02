@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CourseListService } from '../services/course-list.service';
 
 @Component({
   selector: 'app-courses',
@@ -6,8 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./courses.component.scss']
 })
 export class CoursesComponent {
-  courses = [
-    { id: '0', name: 'Media literacy', description: 'Lorem ipsum...', image: '../../assets/course images/media literacy.jpg' },
-    { id: '1', name: 'Front-end Web Development', description: 'Lorem ipsum...', image: '../../assets/course images/Frontend Web.jpg'},
-  ];
+  constructor(private service: CourseListService){}
+  courses = this.service.courseList;
 }
