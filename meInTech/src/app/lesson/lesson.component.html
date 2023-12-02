@@ -1,1 +1,58 @@
-<h1>lesson {{lesson_number}}  works!</h1>
+<section>
+    <div class="w-75 mx-auto d-flex align-items-center flex-column my-5 p-4">
+        <h1 class="h2">{{lessonName}}</h1>
+
+        <div class="wizard-wrapper w-75">
+            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="first">
+                <p class="w-100 mx-auto fs-4 lh-sm m-5">
+                    Welcome to the exciting world of media literacy! In this journey, we'll explore the fundamental
+                    skills
+                    and knowledge needed to navigate and critically engage with various forms of media. Media literacy
+                    is
+                    not just about consuming information; it's about understanding the impact and influence that media
+                    can
+                    have on our perceptions and behaviors. Throughout this course, we'll delve into key concepts,
+                    analyze
+                    media messages, and discuss the historical evolution of media. By the end, you'll develop a
+                    comprehensive understanding of media literacy and its relevance in today's digital age.
+                </p>
+                <div class="d-flex flex-row-reverse">
+                    <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
+                </div>
+            </div>
+            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="second">
+                <p class="w-100 mx-auto fs-4 lh-sm m-5">second</p>
+                <div class="d-flex flex-row-reverse">
+                    <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
+                </div>
+            </div>
+            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="third">
+                <p class="w-100 mx-auto fs-4 lh-sm m-5">third</p>
+                <div class="d-flex flex-row-reverse">
+                    <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
+                </div>
+            </div>
+            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="fourth">
+                <p class="w-100 mx-auto fs-4 lh-sm m-5">fourth</p>
+                <div class="d-flex flex-row-reverse">
+                    <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
+                </div>
+            </div>
+            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="fifth">
+                <p class="w-100 mx-auto fs-4 lh-sm m-5">fifth</p>
+                <div class="d-flex flex-row-reverse">
+                    <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
+                </div>
+            </div>
+            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="finish">
+                <h1 class="w-100 mx-auto text-center display-4 m-5">Great job! lesson {{lesson_number}} cleared!</h1>
+                <div class="d-flex flex-row-reverse">
+                    <a href="" [routerLink]="['/courses', course_id]"><button class="btn btn-success btn-lg mb-4"
+                            (click)="btnClick()">Finish</button></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <app-wizard></app-wizard> -->
+    </div>
+</section>
