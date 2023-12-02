@@ -7,6 +7,6 @@
                 <p class="description my-5">This course is designed to equip participants with the essential skills and knowledge needed to navigate and critically engage with various forms of media. Through a combination of theoretical concepts, practical exercises, and real-world examples, participants will develop a comprehensive understanding of media literacy and its relevance in today's digital age.</p>
             </div>
         </div>
-        <app-list-item [items]="lessons" parentRoute="/lesson" class="course-component"></app-list-item>
+        <app-list-item [isLesson]="true" [isCourse]="false" parentRoute="/lesson" class="course-component" [items]="lessons"></app-list-item>
     </div>
 </section> 

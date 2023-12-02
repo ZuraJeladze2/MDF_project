@@ -3,7 +3,7 @@
         <h1 class="h1  text-center">BROWSE OUR COURSES</h1>
         <hr>
         <div class="course-list w-75 mx-auto">
-            <app-list-item [items]="courses" parentRoute="/courses"></app-list-item>
+            <app-list-item [isCourse]="true" [isLesson]="false" parentRoute="/courses" [items]="courses"></app-list-item>
         </div>
     </div>
 </section>
