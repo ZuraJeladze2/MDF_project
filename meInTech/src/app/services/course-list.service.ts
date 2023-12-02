@@ -9,6 +9,7 @@ export class CourseListService {
   courseList = [
     { id: '0', name: 'Media literacy', description: 'Lorem ipsum...', image: '../../assets/course images/media literacy.jpg' },
     { id: '1', name: 'Front-end Web Development', description: 'Lorem ipsum...', image: '../../assets/course images/Frontend Web.jpg'},
+
   ];
   
   lessonList = [
@@ -20,5 +21,6 @@ export class CourseListService {
     { id: '0', lesson_id: '5', name: 'Media influence of perception and behavior', image:'../../assets/lesson images/lesson.jpg'},
     { id: '0', lesson_id: '6', name: 'Analysis of media messages', image:'../../assets/lesson images/lesson.jpg'},
     { id: '0', lesson_id: '7', name: 'Media and cultural impact', image:'../../assets/lesson images/lesson.jpg'},
-  ];  
+  ];
+  
 }
