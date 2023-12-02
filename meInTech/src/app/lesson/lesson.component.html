@@ -1,7 +1,7 @@
 <section>
     <div class="w-75 mx-auto d-flex align-items-center flex-column my-5 p-4">
-        <h1 class="h2">{{lessonName}}</h1>
-
+        
+        <h1 class="lesson-head h2 w-75 text-center"><a href="" [routerLink]="['/courses', course_id]"><i class="bi bi-x-lg fs-2"></i></a> {{lessonName}}</h1>
         <div class="wizard-wrapper w-75">
             <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="first">
                 <p class="w-100 mx-auto fs-4 lh-sm m-5">
