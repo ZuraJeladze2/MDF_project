@@ -21,6 +21,24 @@ export class LessonComponent {
   fourth: boolean = false;
   fifth: boolean = false;
   finish: boolean = false;  
+
+
+  rashuashiaBtn = true;
+
+  // list items
+  listItems = [
+    { heading: 'List item heading 1', content: 'არასანდო საიტებზე ინფორმაციის მოძიებაში', smallPrint: 'And some small print.' },
+    { heading: 'List item heading 2', content: 'უზარმაზარ ინფორმაციაში ნავიგაციასა და ყალბი სიახლეების აღმოჩენაში', smallPrint: 'And some muted small print.' },
+    { heading: 'List item heading 3', content: 'ფრედის გაწვრთნაში', smallPrint: 'And some muted small print.' }
+  ];
+
+  selectedItemIndex: number | null = null;
+
+  selectItem(index: number): void {
+    this.selectedItemIndex = index;
+  }
+
+
   
   ngOnInit(){
     this.course_id = this.route.snapshot.params['id']
@@ -42,7 +60,7 @@ export class LessonComponent {
     
     } else if (this.third) {
       this.third = false
-      this.fourth = true
+      this.finish = true
     
     } else if (this.fourth) {
       this.fourth = false
@@ -52,5 +70,11 @@ export class LessonComponent {
       this.fifth = false
       this.finish = true
     }
+  }
+
+  freddyJumpIn(btn: Event){
+    console.log(this);
+    this.rashuashiaBtn = false
+    
   }
 }

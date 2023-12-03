@@ -1,55 +1,69 @@
 <section>
     <div class="w-75 mx-auto d-flex align-items-center flex-column my-5 p-4">
-        
-        <h1 class="lesson-head h2 w-75 text-center"><a href="" [routerLink]="['/courses', course_id]"><i class="bi bi-x-lg fs-2"></i></a> {{lessonName}}</h1>
+
+        <h1 class="lesson-head h2 w-75 text-center"><a href="" [routerLink]="['/courses', course_id]"><i
+                    class="bi bi-x-lg fs-2"></i></a> {{lessonName}}</h1>
         <div class="wizard-wrapper w-75">
-            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="first">
-                <p class="w-100 mx-auto fs-4 lh-sm m-5">
-                    Welcome to the exciting world of media literacy! In this journey, we'll explore the fundamental
-                    skills
-                    and knowledge needed to navigate and critically engage with various forms of media. Media literacy
-                    is
-                    not just about consuming information; it's about understanding the impact and influence that media
-                    can
-                    have on our perceptions and behaviors. Throughout this course, we'll delve into key concepts,
-                    analyze
-                    media messages, and discuss the historical evolution of media. By the end, you'll develop a
-                    comprehensive understanding of media literacy and its relevance in today's digital age.
+            <div class="my-wizard w-100 bg-light rounded shadow px-5 py-4" *ngIf="first">
+                <p class="w-100 mx-auto fs-4 lh-base m-5">კეთილი იყოს თქვენი მობრძანება მედიაწიგნიერების ამაღელვებელ სამყაროში! ამ მოგზაურობაში ჩვენ შევიძენთ ფუნდამენტურ უნარებსა და ცოდნას, რომელიც საჭიროა იმ უზარმაზარ ინფორმაციაში ნავიგაციისთვის, რომელიც დღეს ყველასთვის ხელმისაწვდომია. ასევე ვისწავლით, როგორ გავარჩიოთ ყალბი სიახლეები ნამდვილისგან, რა საფრთხეები არსებობს ინტერნეტში და როგორ დავიცვათ თავი მათგან. მოკლედ, საინტერესო თავგადასავალი გველოდება!</p>
+                <div class="d-flex flex-row-reverse">
+                    <!-- <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Back</button> -->
+                    <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
+                </div>
+            </div>
+            <div class="my-wizard w-100 bg-light rounded shadow px-5 py-4" *ngIf="second">
+                <p class="w-100 mx-auto fs-4 lh-sm m-5">მედიაწიგნიერება არ არის მხოლოდ ინფორმაციის მოხმარება. ეს არის იმის გაგება, თუ რა გავლენა შეიძლება ჰქონდეს მედიას ჩვენს აღქმასა და ქცევაზე. ამ კურსის განმავლობაში ჩვენ ჩავუღრმავდებით ძირითად ცნებებს, გავაანალიზებთ მედია შეტყობინებებს და განვიხილავთ მედიის ისტორიულ ევოლუციას.
                 </p>
+                <h3 class="text-center h4">მედია წიგნიერება გვეხმარება:</h3>
+                <div class="list-group my-5">
+                    <div *ngFor="let item of listItems; let i = index"
+                         class="list-group-item-success border border-2 list-group-item-action my-2 btn"
+                         [class.active]="selectedItemIndex === i"
+                         (click)="selectItem(i)">
+                      <p class="my-3 fs-5">{{ item.content }}</p>
+                    </div>
+                </div>
+                
+                    <button *ngIf="rashuashiaBtn" type="button" (click)="freddyJumpIn($event)" class="btn btn-info position-relative mb-5">
+                        ფრედი ვინაა?
+                        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                            <span class="visually-hidden">New alerts</span>
+                        </span>
+                    </button>
+                    <div *ngIf="!rashuashiaBtn" class="freddy-wrapper d-flex mb-5">
+                        <img class="freddy" src="../../assets/freddy/freddy1.png" alt="Freddy shouldbe here">
+                        <div class="freddy-text-wrapper ms-1">
+                            <p class="fs-5 text-black w-100 p-2 lh-sm bg-info shadow rounded">სალამი, ფრედი მე ვარ! სწავლის პერიოდში შენი მეგობარი ვიქნები და ერთად ვისწავლით, რომ არ მოიწყინო.</p>
+                        </div>
+                    </div>
+                
                 <div class="d-flex justify-content-between">
                     <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Back</button>
                     <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
                 </div>
             </div>
-            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="second">
-                <p class="w-100 mx-auto fs-4 lh-sm m-5">second</p>
+            <div class="my-wizard w-100 bg-light rounded shadow px-5 py-4" *ngIf="third">
+                <p class="w-100 mx-auto fs-4 lh-sm m-5">ამ კურსის დასასრულს, საფუძვლიანად გავიაზრებთ თუ რა არის მედიაწიგნიერება და შეგვეძლება ამ ცოდნის გამოყენება დღევანდელ ციფრულ ეპოქაში</p>
                 <div class="d-flex justify-content-between">
                     <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Back</button>
                     <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
                 </div>
             </div>
-            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="third">
-                <p class="w-100 mx-auto fs-4 lh-sm m-5">third</p>
-                <div class="d-flex justify-content-between">
-                    <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Back</button>
-                    <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
-                </div>
-            </div>
-            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="fourth">
+            <!-- <div class="my-wizard w-100 bg-light rounded shadow px-5 py-4" *ngIf="fourth">
                 <p class="w-100 mx-auto fs-4 lh-sm m-5">fourth</p>
                 <div class="d-flex justify-content-between">
                     <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Back</button>
                     <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
                 </div>
             </div>
-            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="fifth">
+            <div class="my-wizard w-100 bg-light rounded shadow px-5 py-4" *ngIf="fifth">
                 <p class="w-100 mx-auto fs-4 lh-sm m-5">fifth</p>
                 <div class="d-flex justify-content-between">
                     <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Back</button>
                     <button class="btn btn-success btn-lg mb-4" (click)="btnClick()">Next</button>
                 </div>
-            </div>
-            <div class="my-wizard w-100 bg-light px-5 py-4" *ngIf="finish">
+            </div> -->
+            <div class="my-wizard w-100 bg-light rounded shadow px-5 py-4" *ngIf="finish">
                 <h1 class="w-100 mx-auto text-center display-4 m-5">Great job! lesson {{lesson_number}} cleared!</h1>
                 <div class="d-flex flex-row-reverse">
                     <a href="" [routerLink]="['/courses', course_id]"><button class="btn btn-success btn-lg mb-4"
