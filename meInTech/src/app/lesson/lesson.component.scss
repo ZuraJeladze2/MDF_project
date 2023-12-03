@@ -1,7 +1,39 @@
-.lesson-head{
+.lesson-head {
     position: relative;
 }
-.lesson-head .bi{
+
+.lesson-head .bi {
     position: absolute;
     left: 0;
+}
+
+.list-group-item-success:hover {
+    background-color: lightgreen;
+    /* Change this to your desired solid green color */
+    border-color: #fff;
+    /* Change this to match the background color */
+    color: #fff;
+    /* Change this to your desired text color */
+}
+
+.list-group-item-success.active {
+    background-color: var(--bs-success);
+    /* Change this to your desired solid green color */
+    border-color: #fff;
+    /* Change this to match the background color */
+    color: #fff;
+    /* Change this to your desired text color */
+}
+.alert-info{
+    height: 100px;
+    background: transparent;
+    color: var(--font-color);
+    border: 2px solid var(--bs-info);
+}
+.icon-wrapper{
+    max-height: 100% !important;
+    background: red;
+}
+.icon-wrapper svg{
+    height: 20px;
 }

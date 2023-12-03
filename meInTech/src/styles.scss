@@ -15,6 +15,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	box-sizing: border-box;
 	font-size: 100%;
 	vertical-align: baseline;
 }
@@ -49,9 +50,23 @@ a{
     --bg-color-alt: rgb(198, 236, 213);
     --font-color-sub: #0f0f0f;
 }
-/*.bg-primary{
-	background-color: var(--bg-color) !important;
+.freddy-wrapper{
+	width: 400px;
+	height: 200px;
+	position: relative;
+	word-wrap: break-word;
 }
-.bg-secondary{
-	background-color: var(--bg-color-alt) !important;
-}*/
+.freddy-wrapper img{
+	height: 100%;
+}
+// .freddy::after {
+//     width: 50px;
+//     height: 50px;
+//     background: red;
+//     content: 'სალამი, ფრედი მე ვარ!';
+//     position: absolute;
+//     right: 0;
+//     top: 0;
+// 	z-index: 3;
+//     display: block; /* Add this line */
+// }
